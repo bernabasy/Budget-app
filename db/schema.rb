@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_01_111254) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_02_114443) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,8 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_111254) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "entity_id", null: false
-    t.bigint "group_id", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -56,13 +54,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_111254) do
     t.string "unconfirmed_email"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["entity_id"], name: "index_users_on_entity_id"
-    t.index ["group_id"], name: "index_users_on_group_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "entities_groups", "entities"
   add_foreign_key "entities_groups", "groups"
-  add_foreign_key "users", "entities"
-  add_foreign_key "users", "groups"
 end
