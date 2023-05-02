@@ -6,4 +6,3 @@ class Group < ApplicationRecord
     has_one_attached :icon
     validates :name, :icon, presence: true
   end
-  
