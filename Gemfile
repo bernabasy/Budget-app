@@ -5,6 +5,8 @@ ruby '3.2.1'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'cancancan'
+
 gem 'devise'
 
 gem 'letter_opener'
