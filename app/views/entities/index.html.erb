@@ -1,0 +1,47 @@
+
+<section class="d-flex flex-column cont my-2">
+  <div class="log-in d-flex justify-content-between align-items-center">
+  <span> 
+<%= link_to groups_path do %>
+<%= image_tag "arrow-left-solid.svg", class: "icon"  %>
+<% end %>
+</span>
+      <li class="headers"> <h2 class = "headers"> Transaction</h2></li>
+      <%= button_to destroy_user_session_path, method: :delete, class:"btn" do %>   
+        <%= image_tag "arrow-right-from-bracket-solid.svg", class:"icon" %>
+      <% end %>               
+  </div>
+
+  <%= render partial: "shared/flash"%>
+ 
+ <div class="d-flex justify-content-between card-custom-header p-3">
+    <% if @group.icon.attached? %>
+      <div class="d-flex gap-3 align-items-center">
+        <img class="img" src="<%= url_for(@group.icon) %>">
+        <p class="name-group-header"> <%= @group.name.capitalize %></p>
+      </div>
+    <% end %>
+  
+    <div class="align-self-center">
+      <span class="name-group"> $<%= @group.total_entities %> </span>
+    </div>
+  </div>
+
+
+<div class="container">
+  <% @group_entities.each do |group_entity| %>
+    <div class="groups d-flex justify-content-between card-custom my-3">
+    <div class ="d-flex flex-column">
+      <p class="name-group-header"> <%= group_entity.entity.name.capitalize %></p>
+      <div class="date-style "><%= group_entity.created_at.strftime("%d %b %Y") %></div>
+    </div>
+    <span class="name-group"> $<%= group_entity.entity.amount %></span>
+  </div>
+  <% end %>
+</div>
+
+</section>
+
+<div class="add-category">
+  <%= link_to 'Add new Purchase', "/groups/#{@group.id}/entities/new", class:"btn btn-outline-light padding-purchase"  %>
+</div>
