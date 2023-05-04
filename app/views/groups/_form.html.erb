@@ -1,4 +1,7 @@
+<div class="container">
+<%= render partial: "shared/flash"%>
 <%= form_with(model: [@user, group]) do |form| %>
+  
   <% if group.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
@@ -20,7 +23,9 @@
   <%= form.file_field :icon, class: "form-control" %>
 </div>
 
-  <div>
-    <%= form.submit %>
+  <div class: "actions add-category-end">
+    <%= form.submit "Add", class: "add-category btn btn-outline-light padding-add-button" %>
+ 
   </div>
 <% end %>
+</div>
