@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_group, only: %i[show edit update destroy]
 
+
   # GET /groups or /groups.json
   def index
     @current_user = current_user
@@ -19,7 +20,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.new(group_params)
 
     if @group.save
-      redirect_to root_path, notice: 'Your category is created successfully'
+      redirect_to groups_path, notice: 'Your category is created successfully'
     else
       flash[:alert] = 'Something went wrong, Try again!'
       render :new
@@ -35,7 +36,7 @@ class GroupsController < ApplicationController
                      else
                        'Something went wrong'
                      end
-    redirect_to root_path
+    redirect_to about_path
   end
 
   private
