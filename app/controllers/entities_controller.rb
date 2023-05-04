@@ -2,7 +2,6 @@ class EntitiesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_entity, only: %i[show edit update destroy]
 
-
   # GET /entities or /entities.json
   def index
     @current_user = current_user
