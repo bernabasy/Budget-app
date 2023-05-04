@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_user, only: %i[show edit update destroy]
 
 
@@ -55,6 +54,7 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+    redirect_to about_path
   end
 
   private
