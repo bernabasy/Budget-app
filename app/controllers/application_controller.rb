@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
   before_action :update_allowed_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(resource)
+    groups_path# replace about_path with the path you want it to redirect to
+  end
+
   protected
 
   def update_allowed_parameters
