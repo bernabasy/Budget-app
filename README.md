@@ -52,12 +52,12 @@
 </details>
 
 ### Live Link <a name="Live link"></a>
-The hosted app can be found [here]()
+The hosted app can be found [here](https://budget-app-rails-9xci.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Loom Video <a name="Loom Video"></a>
-The loom video can be found [here]()
+The loom video can be found [here](https://www.loom.com/share/93f3daa74936453c8893ff193c45a744)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- Features -->

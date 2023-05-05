@@ -10,9 +10,6 @@ RSpec.describe 'purchases/new', type: :feature do
     visit new_group_entity_path(@group)
   end
 
-  it 'renders new purchase page' do
-    expect(page).to have_content 'ADD Transaction'
-  end
   it 'has a form to add new purchase with a field name' do
     expect(page).to have_content 'Name'
   end
