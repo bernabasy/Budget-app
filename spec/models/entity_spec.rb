@@ -7,7 +7,7 @@ RSpec.describe Entity, type: :model do
   end
 
   subject do
-    @Entity = Entity.new(name: 'hammers', amount: 200)
+    @entity = Entity.new(name: 'hammers', amount: 200)
   end
   before { subject.save }
 
