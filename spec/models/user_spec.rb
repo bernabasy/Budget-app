@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
- User.new(name: 'berna', password: '123456', email: 'berna@gmail.com')
+    User.new(name: 'berna', password: '123456', email: 'berna@gmail.com')
   end
 
   it 'name should not be nil' do
