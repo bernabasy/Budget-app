@@ -12,9 +12,7 @@ development:
 
 production:
   <<: *default
-  database: Budget_app_production
-  username: Project
-  password: <%= ENV["PROJECT_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 test:
   <<: *default
@@ -22,3 +20,4 @@ test:
   host: 127.0.0.1
   username: 'postgres'
   password: 'bernabas'
+  
