@@ -4,14 +4,12 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @current_user = current_user
     @group = Group.find(params[:group_id])
     @group_entities = Group.find(params[:group_id]).group_entities.order(created_at: :desc)
   end
 
   # GET /entities/new
   def new
-    @current_user = current_user
     @group = Group.find_by_id(params[:group_id])
     @available_groups = current_user.groups.reject { |f| @group.entities.include?(f) }
   end

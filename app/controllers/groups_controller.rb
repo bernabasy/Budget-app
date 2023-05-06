@@ -4,13 +4,11 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @current_user = current_user
     @groups = current_user.groups
   end
 
   # GET /groups/new
   def new
-    @current_user = current_user
     @group = Group.new
   end
 
