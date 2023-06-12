@@ -41,7 +41,7 @@
 <details>
 <summary>Server</summary>
   <ul>
-    <li><a href="https://guides.rubyonrails.org/getting_started.html">Ruby</a></li>
+    <li><a href="https://guides.rubyonrails.org/getting_started.html">Ruby on Rails</a></li>
   </ul>
 </details>
 <details>
