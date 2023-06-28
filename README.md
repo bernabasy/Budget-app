@@ -84,7 +84,8 @@ To get a local copy up and running, follow these steps:
 - Run `Bundle install`
 - Run `npm install`
 - Create a .env file and add values for `POSTGRES_USERNAME and POSTGRES_PASSWORD`
-- Run `rails db:create db:migrate`
+- Run `rails `rails db:create db:migrate`
+- Run `rails `rails db:migrate`
 - Run  `rails s`
 
 ### Prerequisites
